@@ -1,0 +1,33 @@
+mkdir car-parking-app
+cd car-parking-app
+npm init -y
+npm install express body-parser 
+npm install json2csv --- > for csv file download in future purpose 
+npm install --save-dev nodemon
+
+run : PS C:\Users\HMIS-SWD\Desktop\car-parking-app> node server/app.js
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                             STRUCTURE
+ car-parking-app/
+│
+├── public/
+│   ├── css/
+│   │   └── styles.css
+│   ├── js/
+│   │   └── main.js
+│   └── index.html
+│
+├── server/
+│   ├── routes/
+│   │   └── parking.js
+│   └── app.js
+│
+├── node_modules/
+│
+├── .gitignore
+├── package.json
+└── README.md
+                                                                            

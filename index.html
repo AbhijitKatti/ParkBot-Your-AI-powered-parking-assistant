@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Parking App</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Car Parking App</h1>
+
+        <!-- Registration Form -->
+        <div id="registration">
+            <h2>Register</h2>
+            <form id="registerForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit">Register</button>
+            </form>
+            <p>Already have an account? <a href="#" id="goToLogin">Login here</a></p>
+        </div>
+
+        <!-- Login Form -->
+        <div id="login" style="display:none;">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="loginUser">Email or Username:</label>
+                <input type="text" id="loginUser" name="loginUser" required>
+                
+                <label for="loginPass">Password:</label>
+                <input type="password" id="loginPass" name="loginPass" required>
+                
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <!-- Location Selection -->
+        <div id="locationSelection" style="display:none;">
+            <h2>Select Nearby Location</h2>
+            <select id="locations">
+                <option value="Location1">Location 1</option>
+                <option value="Location2">Location 2</option>
+                <option value="Location3">Location 3</option>
+            </select>
+            <button id="selectLocation">Select</button>
+        </div>
+
+        <!-- Slot Selection -->
+        <div id="slotSelection" style="display:none;">
+            <h2>Available Slots</h2>
+            <ul id="slots">
+                <li class="slot-item">Slot 1 - ₹500/hour</li>
+                <li class="slot-item">Slot 2 - ₹700/hour</li>
+                <li class="slot-item">Slot 3 - ₹600/hour</li>
+            </ul>
+            <button id="payNow">Pay Now</button>
+        </div>
+
+        <!-- Additional Services -->
+        <div id="services" style="display:none;">
+            <h2>Additional Services</h2>
+            <h3>Car Wash</h3>
+            <p>Price: ₹1,000</p>
+            <label>
+                <input type="checkbox" id="carWash">
+                Add Car Wash
+            </label>
+
+            <h3>Food Services</h3>
+            <ul id="foodMenu">
+                <li>
+                    <label>
+                        <input type="checkbox" value="Burger - ₹500">
+                        Burger - ₹500
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" value="Pizza - ₹800">
+                        Pizza - ₹800
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <input type="checkbox" value="Coffee - ₹300">
+                        Coffee - ₹300
+                    </label>
+                </li>
+            </ul>
+
+            <h3>Garage</h3>
+            <p>Price for Repairs: ₹4,000</p>
+            <label>
+                <input type="checkbox" id="garage">
+                Add Garage Service
+            </label>
+
+            <button id="proceedToInvoice">Proceed to Invoice</button>
+        </div>
+
+        <!-- Payment -->
+        <div id="payment" style="display:none;">
+            <h2>Payment</h2>
+            <p>Select Payment Method:</p>
+            <button id="upi">UPI</button>
+            <button id="cash">Cash</button>
+        </div>
+
+        <!-- Invoice -->
+        <div id="invoice" style="display:none;">
+            <h2>Invoice</h2>
+            <p><strong>Location Name:</strong> <span id="invoiceLocation"></span></p>
+            <p><strong>Slot Number:</strong> <span id="invoiceSlot"></span></p>
+            <p><strong>Hours Parked:</strong> <span id="invoiceHours"></span></p>
+            <p><strong>Username:</strong> <span id="invoiceUsername"></span></p>
+            <p><strong>Email:</strong> <span id="invoiceEmail"></span></p>
+            <p><strong>Date and Time:</strong> <span id="invoiceDateTime"></span></p>
+            <p><strong>Paid Method:</strong> <span id="invoiceMethod"></span></p>
+            <p><strong>Additional Services:</strong> <span id="invoiceServices"></span></p>
+            <p><strong>Total Amount:</strong> ₹<span id="invoiceTotalAmount"></span></p>
+            <button onclick="window.print()">Print Invoice</button>
+            <p>Thank you for using our service!</p>
+        </div>
+    </div>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #2C3E50, #4CA1AF);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 450px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    box-sizing: border-box;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Header */
+h1 {
+    color: #2C3E50;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: #34495e;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Forms */
+form {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    color: #2C3E50;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccd1d9;
+    border-radius: 6px;
+    background: #f8f9fa;
+    font-size: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+input:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #1f78c1, #1669a5);
+    transform: scale(1.05);
+}
+
+/* Links */
+p a {
+    color: #3498db;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+p a:hover {
+    color: #1f5fa3;
+}
+
+/* Slot Selection */
+#slotSelection ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#slotSelection li {
+    background: #ecf0f1;
+    padding: 14px;
+    border-radius: 6px;
+    font-weight: 600;
+    color: #2C3E50;
+    margin: 8px 0;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+#slotSelection li:hover {
+    background: #d0d7de;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Payment Options */
+#payment button {
+    margin-top: 10px;
+    padding: 12px;
+    background: #27ae60;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+}
+
+#payment button:hover {
+    background: #218c53;
+    transform: scale(1.05);
+}
+
+/* Invoice */
+#invoice {
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+#invoice p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #34495e;
+    margin: 5px 0;
+}
+
+#invoice button {
+    background: #e67e22;
+    margin-top: 15px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    input {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 15px;
+    }
+}
